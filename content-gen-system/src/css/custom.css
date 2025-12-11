@@ -1,0 +1,335 @@
+/**
+ * 持续内容生成系统 - 自定义样式
+ * 现代化、简洁、有设计感的主题配置
+ */
+
+/* ============================================
+   颜色主题配置
+   ============================================ */
+
+:root {
+  /* 主色调 - 科技蓝紫渐变 */
+  --ifm-color-primary: #6366f1;
+  --ifm-color-primary-dark: #4f46e5;
+  --ifm-color-primary-darker: #4338ca;
+  --ifm-color-primary-darkest: #3730a3;
+  --ifm-color-primary-light: #818cf8;
+  --ifm-color-primary-lighter: #a5b4fc;
+  --ifm-color-primary-lightest: #c7d2fe;
+
+  /* 辅助色 */
+  --ifm-color-secondary: #10b981;
+  --ifm-color-accent: #f59e0b;
+
+  /* 字体 */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", "Fira Code", Consolas, Monaco, "Courier New", monospace;
+  --ifm-code-font-size: 90%;
+
+  /* 圆角 */
+  --ifm-global-radius: 0.75rem;
+  --ifm-button-border-radius: 0.5rem;
+  --ifm-card-border-radius: 1rem;
+
+  /* 间距 */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+
+  /* 代码高亮 */
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.1);
+
+  /* 背景 */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f9fafb;
+}
+
+/* 暗色主题 */
+[data-theme='dark'] {
+  /* 主色调 - 亮度提升的蓝紫色 */
+  --ifm-color-primary: #818cf8;
+  --ifm-color-primary-dark: #6366f1;
+  --ifm-color-primary-darker: #4f46e5;
+  --ifm-color-primary-darkest: #4338ca;
+  --ifm-color-primary-light: #a5b4fc;
+  --ifm-color-primary-lighter: #c7d2fe;
+  --ifm-color-primary-lightest: #e0e7ff;
+
+  /* 辅助色 */
+  --ifm-color-secondary: #34d399;
+  --ifm-color-accent: #fbbf24;
+
+  /* 代码高亮 */
+  --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.15);
+
+  /* 背景 - 深色渐变 */
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-navbar-background-color: rgba(15, 23, 42, 0.8);
+}
+
+/* ============================================
+   导航栏样式
+   ============================================ */
+
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   侧边栏样式
+   ============================================ */
+
+.menu {
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.menu__link {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.menu__link--active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
+  border-left: 3px solid var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   内容区域样式
+   ============================================ */
+
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary-lightest);
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* 代码块样式 */
+.prism-code {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* 引用块样式 */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: rgba(99, 102, 241, 0.05);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+[data-theme='dark'] .markdown blockquote {
+  background-color: rgba(129, 140, 248, 0.1);
+}
+
+/* 表格样式 */
+.markdown table {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.markdown table th {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
+  font-weight: 600;
+}
+
+/* ============================================
+   链接样式
+   ============================================ */
+
+.markdown a {
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.markdown a:hover {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* ============================================
+   卡片样式
+   ============================================ */
+
+.card {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+[data-theme='dark'] .card {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   页脚样式
+   ============================================ */
+
+.footer {
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05));
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .footer {
+  background: linear-gradient(180deg, transparent, rgba(30, 41, 59, 0.5));
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   按钮样式
+   ============================================ */
+
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border: none;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-primary-darkest));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+}
+
+/* ============================================
+   标签样式
+   ============================================ */
+
+.badge {
+  border-radius: 0.375rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   自定义工具类
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   响应式设计
+   ============================================ */
+
+@media (max-width: 996px) {
+  .markdown h1 {
+    font-size: 2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   滚动条样式
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* ============================================
+   动画效果
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown > * {
+  animation: fadeIn 0.5s ease-out;
+}

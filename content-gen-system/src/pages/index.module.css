@@ -1,0 +1,559 @@
+/* ============================================
+   Hero Section - 首屏英雄区
+   ============================================ */
+
+.hero {
+  position: relative;
+  padding: 8rem 0 6rem;
+  text-align: center;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heroGradient {
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  right: -10%;
+  bottom: -50%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(99, 102, 241, 0.15) 0%,
+    rgba(16, 185, 129, 0.05) 45%,
+    transparent 100%
+  );
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(5deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(-5deg);
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+  opacity: 0.9;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0.75;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+.secondaryButton {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--ifm-color-primary);
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+}
+
+/* ============================================
+   Stats Section - 统计数据
+   ============================================ */
+
+.stats {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.03));
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(16, 185, 129, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.statValue {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* ============================================
+   Features Section - 特性展示
+   ============================================ */
+
+.features {
+  padding: 6rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #10b981);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.featureCard:hover::before {
+  transform: scaleX(1);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.featureIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.featureTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ============================================
+   Content Highlight Section - 内容亮点
+   ============================================ */
+
+.highlight {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.03), transparent);
+}
+
+.highlightContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlightText {
+  padding-right: 2rem;
+}
+
+.highlightTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.highlightDescription {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.highlightList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.highlightList li {
+  padding: 0.75rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.highlightList li:last-child {
+  border-bottom: none;
+}
+
+.highlightButton {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.highlightVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.visualCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(16, 185, 129, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  transition: all 0.3s ease;
+}
+
+.visualCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.visualIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.visualText {
+  flex: 1;
+}
+
+.visualTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--ifm-color-primary);
+}
+
+.visualSubtitle {
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* ============================================
+   CTA Section - 行动号召
+   ============================================ */
+
+.cta {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(16, 185, 129, 0.08));
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.1) 0%,
+    transparent 70%
+  );
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1) translate(5%, 5%);
+    opacity: 0.8;
+  }
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ctaDescription {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+}
+
+.ctaButton {
+  font-size: 1.125rem;
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.4);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px -5px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+/* ============================================
+   Responsive Design - 响应式设计
+   ============================================ */
+
+@media (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 5rem 0 4rem;
+    min-height: 60vh;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .highlightContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .highlightText {
+    padding-right: 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statValue {
+    font-size: 2.5rem;
+  }
+
+  .visualCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ctaContent {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ============================================
+   Dark Mode Adjustments - 深色模式调整
+   ============================================ */
+
+[data-theme='dark'] .featureCard {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme='dark'] .visualCard {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.08));
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme='dark'] .statCard {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(16, 185, 129, 0.08));
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme='dark'] .ctaContent {
+  background: rgba(30, 41, 59, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
+}
