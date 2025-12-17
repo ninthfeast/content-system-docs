@@ -8,17 +8,17 @@
    ============================================ */
 
 :root {
-  /* 主色调 - 科技蓝紫渐变 */
-  --ifm-color-primary: #6366f1;
-  --ifm-color-primary-dark: #4f46e5;
-  --ifm-color-primary-darker: #4338ca;
-  --ifm-color-primary-darkest: #3730a3;
-  --ifm-color-primary-light: #818cf8;
-  --ifm-color-primary-lighter: #a5b4fc;
-  --ifm-color-primary-lightest: #c7d2fe;
+  /* 主色调 - 翠绿渐变 */
+  --ifm-color-primary: #10b981;
+  --ifm-color-primary-dark: #059669;
+  --ifm-color-primary-darker: #047857;
+  --ifm-color-primary-darkest: #065f46;
+  --ifm-color-primary-light: #34d399;
+  --ifm-color-primary-lighter: #6ee7b7;
+  --ifm-color-primary-lightest: #a7f3d0;
 
   /* 辅助色 */
-  --ifm-color-secondary: #10b981;
+  --ifm-color-secondary: #0ea5e9;
   --ifm-color-accent: #f59e0b;
 
   /* 字体 */
@@ -36,7 +36,7 @@
   --ifm-spacing-vertical: 1.5rem;
 
   /* 代码高亮 */
-  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(16, 185, 129, 0.1);
 
   /* 背景 */
   --ifm-background-color: #ffffff;
@@ -45,21 +45,21 @@
 
 /* 暗色主题 */
 [data-theme='dark'] {
-  /* 主色调 - 亮度提升的蓝紫色 */
-  --ifm-color-primary: #818cf8;
-  --ifm-color-primary-dark: #6366f1;
-  --ifm-color-primary-darker: #4f46e5;
-  --ifm-color-primary-darkest: #4338ca;
-  --ifm-color-primary-light: #a5b4fc;
-  --ifm-color-primary-lighter: #c7d2fe;
-  --ifm-color-primary-lightest: #e0e7ff;
+  /* 主色调 - 亮度提升的翠绿色 */
+  --ifm-color-primary: #34d399;
+  --ifm-color-primary-dark: #10b981;
+  --ifm-color-primary-darker: #059669;
+  --ifm-color-primary-darkest: #047857;
+  --ifm-color-primary-light: #6ee7b7;
+  --ifm-color-primary-lighter: #a7f3d0;
+  --ifm-color-primary-lightest: #d1fae5;
 
   /* 辅助色 */
-  --ifm-color-secondary: #34d399;
+  --ifm-color-secondary: #38bdf8;
   --ifm-color-accent: #fbbf24;
 
   /* 代码高亮 */
-  --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.15);
+  --docusaurus-highlighted-code-line-bg: rgba(52, 211, 153, 0.15);
 
   /* 背景 - 深色渐变 */
   --ifm-background-color: #0f172a;
@@ -106,11 +106,11 @@
 }
 
 .menu__link:hover {
-  background-color: rgba(99, 102, 241, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
 }
 
 .menu__link--active {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(14, 165, 233, 0.1));
   border-left: 3px solid var(--ifm-color-primary);
   font-weight: 600;
 }
@@ -155,14 +155,14 @@
 /* 引用块样式 */
 .markdown blockquote {
   border-left: 4px solid var(--ifm-color-primary);
-  background-color: rgba(99, 102, 241, 0.05);
+  background-color: rgba(16, 185, 129, 0.05);
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
 }
 
 [data-theme='dark'] .markdown blockquote {
-  background-color: rgba(129, 140, 248, 0.1);
+  background-color: rgba(52, 211, 153, 0.1);
 }
 
 /* 表格样式 */
@@ -173,7 +173,7 @@
 }
 
 .markdown table th {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(14, 165, 233, 0.1));
   font-weight: 600;
 }
 
@@ -217,7 +217,7 @@
    ============================================ */
 
 .footer {
-  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05));
+  background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.05));
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 

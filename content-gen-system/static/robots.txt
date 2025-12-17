@@ -1,0 +1,25 @@
+# robots.txt for docs.content-system.ninthfeast.com
+# 允许所有搜索引擎抓取
+
+User-agent: *
+Allow: /
+
+# 站点地图位置
+Sitemap: https://docs.content-system.ninthfeast.com/sitemap.xml
+
+# 禁止抓取的路径（如果有）
+# Disallow: /admin/
+# Disallow: /private/
+
+# 针对特定搜索引擎的优化
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# 抓取延迟（可选，单位：秒）
+# Crawl-delay: 1

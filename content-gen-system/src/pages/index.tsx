@@ -193,10 +193,49 @@ function CTA() {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
 
+  // 结构化数据 (Schema.org) - 帮助搜索引擎更好地理解网站内容
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '持续内容生成系统',
+    description: '从理论到实践，探索永不停歇的内容创造之道。涵盖自然现象、数据流系统、算法生成、人类活动与抽象思维的完整知识体系。',
+    url: 'https://docs.content-system.ninthfeast.com',
+    author: {
+      '@type': 'Person',
+      name: 'lhqs',
+      email: 'lhqs1314@gmail.com'
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'lhqs'
+    },
+    inLanguage: 'zh-CN',
+    keywords: '内容生成系统,AI内容创作,自动化内容,内容营销,SEO优化,内容策略,数字营销',
+    about: {
+      '@type': 'Thing',
+      name: '内容生成系统',
+      description: '一套完整的持续内容生成知识体系，涵盖理论、实践、技术深度和商业应用'
+    },
+    educationalLevel: '高级',
+    learningResourceType: '文档',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '1'
+    }
+  };
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="从理论到实践，探索永不停歇的内容创造之道。涵盖自然现象、数据流系统、算法生成、人类活动与抽象思维的完整知识体系。">
+      {/* 结构化数据注入 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Hero />
       <Stats />
       <Features />
